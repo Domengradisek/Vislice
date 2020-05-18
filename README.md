@@ -1,3 +1,3 @@
 # Vislice
 
-Ivan Vidav, France Kozolič, Jurij Vega
+Borut Pahor, France Kozolič, Jurij Vega
