@@ -1,3 +1,3 @@
 # Vislice
 
-Ivan Vidav, France Kozolič, Jurij Vega
+Janez Janša, France Kozolič, Jurij Vega
