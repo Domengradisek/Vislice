@@ -1,3 +1,3 @@
 # Vislice
 
-Borut Pahor, France Kozolič, Jurij Vega
+V tem repozitoriju bom programiral vsem znano igro vislice.
