@@ -35,7 +35,7 @@ class Igra:
         return True
 
     def poraz(self):
-        if self.stevilo_napak() >= STEVILO_DOVOLJENIH_NAPAK:
+        if self.stevilo_napak() >= 10:
             return True
         else:
             return False
@@ -59,7 +59,6 @@ class Igra:
         return niz
 
     def ugibaj(self, crka):
-        crka = crka.upper()
         if crka in self.napacne_crke() or crka in self.pravilne_crke():
             return PONOVLJENA_CRKA
         else:
@@ -75,14 +74,14 @@ class Igra:
 
 bazen_besed = []
 
-def izbor_besed(n, a, b):
+def izbor_besed(n):
     seznam = []
     with open('besede.txt', encoding='utf-8') as besede:
         for beseda in besede:
             beseda = beseda[::-1]
             beseda = beseda[1:]
             beseda = beseda[::-1]
-            if len(beseda) == n and beseda[0] == a and beseda[-1] == b:
+            if len(beseda) == n:
                 seznam.append(beseda)
     global bazen_besed
     bazen_besed = seznam
