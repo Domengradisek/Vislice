@@ -73,6 +73,8 @@ class Igra:
             else:
                 return NAPACNA_CRKA
 
+bazen_besed = []
+
 def izbor_besed(n, a, b):
     seznam = []
     with open('besede.txt', encoding='utf-8') as besede:
@@ -82,9 +84,8 @@ def izbor_besed(n, a, b):
             beseda = beseda[::-1]
             if len(beseda) == n and beseda[0] == a and beseda[-1] == b:
                 seznam.append(beseda)
-    return seznam
-
-bazen_besed = izbor_besed(n=8, a='f', b='r')
+    global bazen_besed
+    bazen_besed = seznam
 
 import random
 
