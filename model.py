@@ -72,3 +72,23 @@ class Igra:
                 return PRAVILNA_CRKA
             else:
                 return NAPACNA_CRKA
+
+def izbor_besed(n, a, b):
+    seznam = []
+    with open('besede.txt', encoding='utf-8') as besede:
+        for beseda in besede:
+            beseda = beseda[::-1]
+            beseda = beseda[1:]
+            beseda = beseda[::-1]
+            if len(beseda) == n and beseda[0] == a and beseda[-1] == b:
+                seznam.append(beseda)
+    return seznam
+
+bazen_besed = izbor_besed(n=8, a='f', b='r')
+
+import random
+
+def nova_igra():
+    geslo = random.choice(bazen_besed)
+    crke = []
+    return Igra(geslo, crke)
